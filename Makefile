@@ -8,7 +8,7 @@
 #*************************************************************************
 # Makefile for CaSnooper
 
-TOP = ../..
+TOP = .
 include $(TOP)/configure/CONFIG
 
 # Define to make caSnooperB with a modified version of base and not
@@ -61,6 +61,7 @@ ifeq ($(CA_SNOOPERB),YES)
 endif
 
 include $(TOP)/configure/RULES
+include $(TOP)/configure/RULES_TOP
 
 caSnooper$(OBJ) snoopServer$(OBJ) : ../snoopServer.h
 caSnooperB$(OBJ) snoopClient$(OBJ) : ../snoopClient.h
