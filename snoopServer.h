@@ -51,7 +51,7 @@
 #include "snoopStat.h"
 #include "epicsVersion.h"
 
-#if EPICS_REVISION > 13
+#if EPICS_VERSION > 3 | EPICS_REVISION > 13
 #include "epicsTimer.h"
 #define osiTime epicsTime
 #else
@@ -86,7 +86,7 @@ typedef struct _snoopServerStats
     short precision;
 } snoopServerStats;
 
-#if EPICS_REVISION > 13
+#if EPICS_VERSION > 3 | EPICS_REVISION > 13
 class snoopRateStatsTimer : public epicsTimerNotify
 {
   public:
